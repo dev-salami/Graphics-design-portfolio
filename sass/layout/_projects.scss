@@ -1,0 +1,101 @@
+.projects {
+  background-image: radial-gradient(
+    rgba($color-tertiary-light, 0.7),
+    rgba($color-tertiary-light, 0.7)
+  );
+  border-radius: 2rem;
+}
+// .projects {
+//   background-color: #0a99ff;
+// }
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  justify-items: center;
+
+  padding: 1rem 2rem 5rem 2rem;
+  @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.8rem;
+    column-gap: 1.8rem;
+    padding: 1rem 1rem 5rem 1rem;
+  }
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+  }
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+  }
+}
+.image__box {
+  width: 25rem;
+  height: 25rem;
+  display: inline-block;
+  @include respond(tab-land) {
+    width: 30rem;
+    height: 33rem;
+  }
+  @include respond(tab-port) {
+    width: 38rem;
+    height: 45rem;
+  }
+  @include respond(phone) {
+    width: 45rem;
+    height: 45rem;
+  }
+
+  &-item {
+    // width: 20rem;
+    // height: 20rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+}
+.filter__box {
+  text-align: center;
+}
+.pop-up {
+  position: fixed;
+  top: 0rem;
+  right: 3rem;
+  left: 3rem;
+  height: 100vh;
+
+  background-color: rgba(grey, 0.7);
+  z-index: 9999;
+  display: none;
+  padding: 3rem;
+}
+.times {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: 9999;
+  color: black;
+  font-size: 5rem;
+}
+.pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55rem;
+  height: 55rem;
+}
+.btn {
+  color: black;
+}
+.btn:active,
+:focus {
+  color: white;
+}

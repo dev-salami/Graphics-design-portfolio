@@ -1,0 +1,118 @@
+.home {
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  stroke: aqua;
+  color: #2998ff;
+  display: none;
+  z-index: 10000;
+  transition: all 0.5s;
+  @include respond(phone) {
+    display: block;
+    padding: 0.5rem 2rem 0 0;
+  }
+}
+.icon:hover {
+  transform: scale(1.1);
+}
+.show {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 3rem;
+  right: 3rem;
+  z-index: 10000;
+  border-radius: 2rem;
+  @include respond(tab-port) {
+    right: 0rem;
+    width: 100%;
+    left: 0rem;
+  }
+
+  //
+  background-color: rgb(0, 38, 66);
+  // position: fixed;
+  // top: 0;
+  //left: 3rem;
+  //right: 3rem;
+  // z-index: 10000;
+
+  &__logo {
+    height: 5rem;
+    border-radius: 2rem;
+  }
+  &__logo-box {
+    display: flex;
+  }
+  &__list {
+    display: flex;
+    padding-right: 5rem;
+    list-style: none;
+    align-items: center;
+    // padding-top: 1rem;
+    // height: 0;
+
+    color: aqua;
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &__item {
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 300;
+      padding: 0.2rem 1.5rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        aqua 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+    &:focus :active {
+      background-color: burlywood;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-tertiary-dark;
+      transform: translateX(1rem);
+    }
+  }
+}
+// nav.sticky {
+//   position: fixed;
+//   top: 0;
+//   left: 3rem;
+//   z-index: 10000;
+//   transition: 0;
+//   // right: 3rem;
+//   width: calc(100vw-3rem);
+// }
+.navigation__link:hover {
+  color: black;
+}
